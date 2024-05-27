@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+}
+
+.border-color-red {
+    border-color: hsl(0, 100%, 66%) !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.visible {
+    visibility: visible !important;
+}
+
+body {
+    background-color: hsl(278, 68%, 11%);
+    z-index: -1;
+}
+
+#container {
+    max-width: 375px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+}
+
+.bg-hero {
+    background-color: hsl(278, 68%, 11%);
+    max-width: 375px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto 80px;
+}
+
+.bg-hero .card-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 140px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.bg-hero .card-image.front {
+    background-image: url("../images/bg-card-front.png");
+    left: 20px;
+    bottom: -40px;
+    z-index: 1;
+    color: hsl(0, 0%, 100%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-hero .card-image.front .logo-in-card {
+    width: 50px;
+    margin-bottom: 30px;
+}
+
+.bg-hero .card-image.front .card-number-in-card {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.bg-hero .card-image.front .details-in-card-container {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 2px;
+}
+
+.bg-hero .card-image.back {
+    background-image: url("../images/bg-card-back.png");
+    right: 20px;
+    top: 20px;
+}
+
+.bg-hero .card-image.back .code-in-card {
+    color: hsl(0, 0%, 100%);
+    font-size: 10px;
+    position: absolute;
+    top: 62px;
+    right: 37px;
+}
+
+main {
+    padding: 0 20px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main form label {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    gap: 5px;
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+
+main form .error {
+    font-size: 10px;
+    color: hsl(0, 100%, 66%);
+    text-transform: none;
+    letter-spacing: normal;
+    visibility: hidden;
+}
+
+input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid hsl(270, 3%, 87%);
+    padding: 15px 15px 15px 20px;
+    background: transparent;
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: hsl(270, 3%, 87%);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+input:focus {
+    border-color: hsl(249, 99%, 64%);
+    outline: none;
+}
+
+main form .card-details {
+    display: flex;
+    gap: 10px;
+}
+
+main form .card-details label {
+    flex: 1;
+}
+
+main form .card-details .date div {
+    display: flex;
+    gap: 10px;
+}
+
+main form #submit,
+.thanks #return {
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0 40px;
+}
+
+.thanks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.thanks .thanks-logo {
+    background-image: url("../images/icon-complete.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.thanks .thanks-title {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.thanks .thanks-description {
+    margin-bottom: 30px;
+    color: hsl(279, 6%, 55%);
+}
+
+.thanks #return {
+    width: 100%;
+}

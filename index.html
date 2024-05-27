@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
+        <script src="./assets/js/script.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" defer></script>
+        <title>Frontend Mentor | Interactive card details form</title>
+    </head>
+    <body>
+        <div id="container">
+            <section class="bg-hero">
+                <div class="card-image front">
+                    <img class="logo-in-card" src="./assets/images/card-logo.svg" alt="card logo" >
+                    <span class="card-number-in-card">
+                        0000 0000 0000 0000
+                    </span>
+                    <div class="details-in-card-container">
+                        <span class="name-in-card">
+                            Jane Appleseed
+                        </span>
+                        <div class="date-in-card-container">
+                            <span class="month-in-card">00</span>/<span class="year-in-card">00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-image back">
+                    <span class="code-in-card">000</span>
+                </div>
+            </section>
+            <main>
+                <form>
+                    <label>
+                        <span>Cardholder name</span>
+                        <input type="text" id="name" maxlength="23" placeholder="e.g. Jane Appleseed">
+                        <p class="error">Can't be blank</p>
+                    </label>
+                    <label>
+                        <span>Card number</span>
+                        <input id="card-number" type="text" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" data-mask="0000 0000 0000 0000">
+                        <p class="error">The field must have 16 numbers</p>
+                    </label>
+                    <div class="card-details">
+                        <label class="date">
+                            <span>Exp. date (mm/yy)</span>
+                            <div>
+                                <input class="date-container" id="month" type="text" maxlength="2" placeholder="MM" data-mask="00">
+                                <input class="date-container" id="year" type="text" maxlength="2" placeholder="YY" data-mask="00">
+                            </div>
+                            <p class="error">Can't be blank</p>
+                        </label>
+                        <label>
+                            <span>cvc</span>
+                            <input id="code" type="text" maxlength="3" placeholder="e.g. 123" data-mask="000">
+                            <p class="error">Can't be blank</p>
+                        </label>
+                    </div>
+                    <div id="submit">Confirm</div>
+                </form>
+            </main>
+            <section class="thanks hide">
+                <div class="thanks-logo"></div>
+                <h2 class="thanks-title">Thank you!</h2>
+                <p class="thanks-description">We've added your card details</p>
+                <div id="return">Continue</div>
+            </section>
+        </div>
+    </body>
+</html>
